@@ -9,7 +9,8 @@
     "routing",
     "llm"
   ],
-  "accent": "#264653",
+  "accent": "#50c82c",
+  "secondary_accent": "#a9a72c",
   "dashboard_metrics": [
     {
       "label": "Resolution Rate",
@@ -42,5 +43,52 @@
     "The primary value proposition is: Classify tickets, suggest queues, and summarize urgency drivers for faster support workflows.",
     "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
     "Typical stakeholders include analytics, operations, product, and leadership teams working on tickets, routing, llm."
+  ],
+  "app_archetype": "copilot",
+  "ui_profile": {
+    "layout": "stack",
+    "surface": "slate",
+    "font_stack": "\"Plus Jakarta Sans\", \"Segoe UI\", sans-serif",
+    "radius": 26,
+    "shadow": 68,
+    "eyebrow_style": "outline",
+    "module_columns": 3,
+    "hero_align": "left",
+    "headline_mode": "normal"
+  },
+  "app_modules": [
+    {
+      "label": "Workflow 01",
+      "title": "Routing Simulator",
+      "description": "Preview how a request gets prioritized or routed through the workflow.",
+      "endpoint": "/score",
+      "input_mode": "json",
+      "cta": "Simulate Route",
+      "prefill": "{\n  \"features\": {\n    \"query\": \"Summarize the highest priority risk and recommended next step.\",\n    \"audience\": \"analytics\"\n  }\n}",
+      "hint": "Routing score and top signals will appear here.",
+      "span": "normal"
+    },
+    {
+      "label": "Workflow 02",
+      "title": "Operator Brief",
+      "description": "Generate a concise recommended action set for the current workflow state.",
+      "endpoint": "/recommend",
+      "input_mode": "json",
+      "cta": "Generate Brief",
+      "prefill": "{\n  \"prompt\": \"Recommend the next best action for Support Ticket Router LLM.\",\n  \"features\": {\n    \"query\": \"Summarize the highest priority risk and recommended next step.\",\n    \"audience\": \"analytics\"\n  },\n  \"metrics\": {\n    \"acquisition\": 28.3,\n    \"activation\": 31.5,\n    \"retention\": 45.6,\n    \"revenue\": 69.1\n  }\n}",
+      "hint": "Operator brief and recommended actions will appear here.",
+      "span": "wide"
+    },
+    {
+      "label": "Workflow 03",
+      "title": "Grounded Prompt",
+      "description": "Ask a targeted question and inspect the support context behind the answer.",
+      "endpoint": "/query",
+      "input_mode": "text",
+      "cta": "Run Prompt",
+      "prefill": "What is the top priority recommendation for Support Ticket Router LLM?",
+      "hint": "Grounded answer and context excerpts will appear here.",
+      "span": "normal"
+    }
   ]
 }
