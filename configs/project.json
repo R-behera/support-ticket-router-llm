@@ -1,0 +1,46 @@
+{
+  "slug": "support-ticket-router-llm",
+  "title": "Support Ticket Router LLM",
+  "project_type": "llm",
+  "domain": "Operations AI",
+  "summary": "Classify tickets, suggest queues, and summarize urgency drivers for faster support workflows.",
+  "tags": [
+    "tickets",
+    "routing",
+    "llm"
+  ],
+  "accent": "#264653",
+  "dashboard_metrics": [
+    {
+      "label": "Resolution Rate",
+      "value": "74%",
+      "delta": "+5.8%"
+    },
+    {
+      "label": "Answer Quality",
+      "value": "93%",
+      "delta": "+2.2%"
+    },
+    {
+      "label": "Ops Time Saved",
+      "value": "17h",
+      "delta": "+3h"
+    }
+  ],
+  "sample_features": {
+    "query": "Summarize the highest priority risk and recommended next step.",
+    "audience": "analytics"
+  },
+  "sample_metrics": {
+    "acquisition": 28.3,
+    "activation": 31.5,
+    "retention": 45.6,
+    "revenue": 69.1
+  },
+  "knowledge_base": [
+    "Support Ticket Router LLM is positioned as a Operations AI starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
+    "The primary value proposition is: Classify tickets, suggest queues, and summarize urgency drivers for faster support workflows.",
+    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
+    "Typical stakeholders include analytics, operations, product, and leadership teams working on tickets, routing, llm."
+  ]
+}
